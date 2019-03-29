@@ -17,7 +17,8 @@ validate(units, schema="../schemas/units.schema.yaml")
 # contigs in reference genome
 contigs = pd.read_table(config["ref"]["genome"] + ".fai",
                         header=None, usecols=[0], squeeze=True, dtype=str)
-
+contigs=contigs[0:10] #all 10 chromosomes
+#contigs=contigs[3:4] #only Chr04
 
 ##### Wildcard constraints #####
 wildcard_constraints:
