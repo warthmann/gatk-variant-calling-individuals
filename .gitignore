@@ -22,8 +22,14 @@ scripts/.snakemake*
 !regions_of_interest.bed
 !snpEff.config
 !adapter.fa
-!genomes_and_annotations
-!genomes_and_annotations/*
+#!genomes_and_annotations
+#!genomes_and_annotations/*
+#!genomes_and_annotations/snpeffdata
+#!genomes_and_annotations/snpeffdata/*
+#!genomes_and_annotations/Sorghum
+#!genomes_and_annotations/Sorghum/*
+#!/genomes_and_annotations/snpeffdata/genomes/
+#!/genomes_and_annotations/snpeffdata/Sorghum_bicolor_NCBIv3.42/
 
 # other
 !LICENSE
