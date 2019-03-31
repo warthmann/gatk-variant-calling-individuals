@@ -42,7 +42,7 @@ rule map_reads:
         extra=get_read_group,
         sort="samtools",
         sort_order="coordinate"
-    threads: 8
+    threads: 3
     wrapper:
         "0.27.1/bio/bwa/mem"
 
