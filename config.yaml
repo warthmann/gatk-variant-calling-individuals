@@ -37,7 +37,8 @@ params:
     GenotypeGVCFs: "--dbsnp genomes_and_annotations/Sorghum/Sbicolor_Patterson_454.vcf.gz "
     VariantRecalibrator: ""
   picard:
-    MarkDuplicates: "REMOVE_DUPLICATES=true TMP_DIR=/mnt/norman/tmp/ "
+    #make sure the temp directories are appropriate and large enough, set with TMP_DIR=/tmp/
+    MarkDuplicates: "REMOVE_DUPLICATES=true "
   trimmomatic:
     pe:
       trimmer:
@@ -55,3 +56,5 @@ params:
         - "SLIDINGWINDOW:4:15"
         - "MINLEN:36"
         - "ILLUMINACLIP:./adapter.fa:2:30:10:1:true"
+
+#make sure the temp directories are appropriate and large enough, including for java!
